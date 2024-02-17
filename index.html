@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero Interactivo con Vectores</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="app">
+
+        <div class="texto uno">
+            <h3>Cómo moverse por el tablero</h3>
+            <h4>Instrucciones</h4>
+            <ul>
+                <li>Mueve el ratón por el tablero para ver el vector necesario para moverte a esa casilla</li>
+                <li>Haz click sobre la casilla para moverte a ella</li>
+                <li>Haz click en el boton de ajuste XY para cambiar si hay ajuste xy o no</li>
+            </ul>
+            <div id="div-btn">
+                <button id="toggleAjusteXY">Ajuste de xy: Off</button>
+                <p class="formaVector">(x,y)</p>
+            </div>
+            <p>Desplazamiento:</p>
+            <p class="desplazamiento x"></p>
+            <p class="desplazamiento y"></p>
+        </div>
+        <div class="tablero">
+            <p id="ejeX">Y</p>
+            <div class="fila">
+                <p id="ejeY">X</p>
+                <canvas id="tablero" width="550" height="550"></canvas>
+            </div>
+            
+        </div>
+        
+        
+        <div class="texto dos">
+            <h4>HAZ SCROLL HACIA ABAJO SI NO VES ESTE TEXTO ENTERO</h4>
+            <p>
+                Recordatorio, los tableros, como son arrays bidimensionales se pintan desde la esquina superior izquierda a la esquina inferior derecha.
+            </p>
+            <p>
+                Por ello cuando nos desplazamos hacia arriba o hacia la izquierda se resta y para abajo o derecha se suma.
+            </p>
+            <h5>
+                Lo siguiente lo dejaremos para mas adelante:
+            </h5>
+            <p>
+                El boton de ajuste XY activa o desactiva la corrección de qué son las x y qué son las y en programación.
+            </p>
+            <p>
+                En un array[x][y], la 'x' lleva las filas (altura) y la 'y' las columnas (ancho), pero se puede ajusta para que sea al contrario, 
+                como es en el mundo de las matemáticas donde la 'x' son las columnas (ancho) y la 'y' son las filas (altura).
+            </p>
+            <p>
+                No hay una sola forma correcta, como todo en programación, siempre puedes encontrar
+                una más eficiente, una forma mas legible o la que más te guste a ti.
+            </p>
+            <p>
+                Lo unico que no cambia es cómo se calcula el vector, que es: <br> <code>`Vector = Posicion Siguiente - Posicion Actual`</code>
+            </p>
+        </div>
+            
+        
+    </div>
+</body>
+</html>
